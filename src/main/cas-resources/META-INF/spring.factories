@@ -1,0 +1,6 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  org.apereo.cas.config.CasEmbeddedContainerTomcatConfiguration,\
+  org.apereo.cas.config.CasEmbeddedContainerTomcatFiltersConfiguration,\
+  com.threedr3am.learn.cas.configuration.AuthenticationConfiguration,\
+  com.threedr3am.learn.cas.configuration.WebflowConfiguration
+

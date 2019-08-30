@@ -147,6 +147,27 @@
         </dependency>
 
         <dependency>
+          <groupId>org.apereo.cas</groupId>
+          <artifactId>cas-server-core-authentication</artifactId>
+          <version>${cas.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apereo.cas</groupId>
+          <artifactId>cas-server-core-authentication-api</artifactId>
+          <version>${cas.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apereo.cas</groupId>
+          <artifactId>cas-server-core-webflow</artifactId>
+          <version>${cas.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>org.apereo.cas</groupId>
+          <artifactId>cas-server-core-webflow-api</artifactId>
+          <version>${cas.version}</version>
+        </dependency>
+
+        <dependency>
           <groupId>org.projectlombok</groupId>
           <artifactId>lombok</artifactId>
           <version>1.16.18</version>

@@ -1,4 +1,4 @@
-package com.threedr3am.learn.encoder;
+package com.threedr3am.learn.cas.encoder;
 
 import java.math.BigInteger;
 import java.security.MessageDigest;

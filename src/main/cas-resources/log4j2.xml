@@ -221,7 +221,7 @@
             <AppenderRef ref="casAudit"/>
             <AppenderRef ref="casFile"/>
         </AsyncLogger>
-        <AsyncLogger name="com.threedr3am.learn.encoder.CustomPasswordEncoder" level="info" includeLocation="true">
+        <AsyncLogger name="threedr3am.learn" level="info" includeLocation="true">
             <AppenderRef ref="casConsole"/>
         </AsyncLogger>
         <AsyncRoot level="error">
