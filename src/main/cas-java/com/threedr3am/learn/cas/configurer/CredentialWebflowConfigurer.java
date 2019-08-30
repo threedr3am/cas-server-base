@@ -8,6 +8,8 @@ import org.apereo.cas.web.flow.configurer.DefaultLoginWebflowConfigurer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.webflow.definition.registry.FlowDefinitionRegistry;
 import org.springframework.webflow.engine.Flow;
+import org.springframework.webflow.engine.ViewState;
+import org.springframework.webflow.engine.builder.BinderConfiguration;
 import org.springframework.webflow.engine.builder.support.FlowBuilderServices;
 
 /**
@@ -34,5 +36,10 @@ public class CredentialWebflowConfigurer extends DefaultLoginWebflowConfigurer {
   @Override
   protected void createRememberMeAuthnWebflowConfig(Flow flow) {
     createFlowVariable(flow, CasWebflowConstants.VAR_ID_CREDENTIAL, CustomCredential.class);
+    if (casProperties.getTicket().getTgt().getRememberMe().isEnabled()) {
+      final ViewState state = getState(flow, CasWebflowConstants.STATE_ID_VIEW_LOGIN_FORM, ViewState.class);
+      final BinderConfiguration cfg = getViewStateBinderConfiguration(state);
+      cfg.addBinding(new BinderConfiguration.Binding("rememberMe", null, false));
+    }
   }
 }
